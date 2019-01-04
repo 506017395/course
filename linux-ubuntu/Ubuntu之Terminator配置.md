@@ -43,6 +43,46 @@ cd ~/.config/terminator/ && sudo gedit config
 [plugins]
 ```
 
-###### 4.
+###### 4.卸载自带的终端(可以不卸载,不影响后续操作)
 
-!(https://thumbnail10.baidupcs.com/thumbnail/d5c9c43aebdcd941fdc1adb8821d1b42?fid=3479087869-250528-762910013814356&time=1546567200&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-YTTFJpwgGqc%2B2m01U8m0krEOZkY%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=79629003473047677&dp-callid=0&size=c256_u256&quality=90&vuk=-&ft=video)
+```
+sudo apt-get remove --purge gnome-terminal
+```
+
+
+
+###### 5.在右键菜单中添加open in termintor
+
+https://blog.csdn.net/bestBT/article/details/81221378?utm_source=blogxgwz2
+
+###### 6.下面的都是从上面的连接里弄过来的
+
+安装 Nautilus-actions
+
+```
+sudo add-apt-repository ppa:daniel-marynicz/filemanager-actions
+```
+
+```
+sudo apt-get install filemanager-actions-nautilus-extension
+```
+
+通过上面两句话添加PPA并且安装Nautilus-actions 
+
+使用`fma-config-tool` 启动配置界面
+
+Command > Path
+
+```
+/usr/bin/terminator
+```
+
+Command > Parameters
+
+```
+--working-directory=%d/%b
+```
+
+将其设置为顶级菜单
+
+设置 Runtime preferences 下面的 menu layout去勾
