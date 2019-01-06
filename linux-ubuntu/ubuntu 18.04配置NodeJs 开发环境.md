@@ -26,8 +26,8 @@ export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
 
 # node.js
 export NODE_HOME=/usr/local/nodejs
-export PATH=.:$JAVA_HOME/bin:$PATH:$NODE_HOME/bin
 export NODE_PATH=$NODE_HOME/node_global
+export PATH=.:$JAVA_HOME/bin:$PATH:$NODE_HOME/bin:$NODE_PATH/bin
 ```
 
 ###### 3.测试是否配置成功
